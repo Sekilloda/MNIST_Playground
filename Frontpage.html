@@ -1,0 +1,774 @@
+<html>
+<head><script src="//archive.org/includes/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app224.us.archive.org';v.server_ms=583;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=zC7xTh84" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://yann.lecun.com/exdb/mnist/","20250105151917","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1736090357");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=p7PEIJWi" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>MNIST handwritten digit database, Yann LeCun, Corinna Cortes and Chris Burges</title>
+</head>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://web.archive.org/web/20250105151917/https://ssl." : "https://web.archive.org/web/20250105151917/http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6178702-1");
+pageTracker._trackPageview();
+</script>
+
+<body bgcolor="#FFFFFF" link="#FF0000" vlink="#820594" alink="#111111" background="/web/20250105151917im_/https://yann.lecun.com/exdb/mnist/wm5b.gif"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display:none;direction:ltr;" toolbar-mode="auto">
+<div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20250105151917/https%3A//yann.lecun.com/exdb/mnist/"
+	    scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0" /></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="https://yann.lecun.com/exdb/mnist/" onfocus="this.focus();this.select();" style="flex:1;"/><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20250105151917" /><input type="submit" value="Go" />
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;">
+          </div>
+        <div class="k">
+          <a href="" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="750" height="27" border="0"></canvas>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20241205125342/http://yann.lecun.com/exdb/mnist/" title="05 Dec 2024"><strong>Dec</strong></a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 15:19:17 Jan 05, 2025">JAN</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20250211161532/http://yann.lecun.com/exdb/mnist/" title="11 Feb 2025"><strong>Feb</strong></a></td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20250103144930/https://yann.lecun.com/exdb/mnist/" title="14:49:30 Jan 03, 2025"><img src="https://web-static.archive.org/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 15:19:17 Jan 05, 2025">05</td>
+            <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20250107040049/http://yann.lecun.com/exdb/mnist/" title="04:00:49 Jan 07, 2025"><img src="https://web-static.archive.org/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0" /></a></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20231229081350/http://yann.lecun.com/exdb/mnist/" title="29 Dec 2023"><strong>2023</strong></a></td>
+            <td class="c" id="displayYearEl" title="You are here: 15:19:17 Jan 05, 2025">2025</td>
+            <td class="f" nowrap="nowrap">2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="#" title="Share via My Web Archive" >
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
+        </span>
+                <a class="xxs" href="http://faq.web.archive.org/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="/web/20250105151917/http://web.archive.org/screenshot/https://yann.lecun.com/exdb/mnist/"
+           id="wm-screenshot"
+           title="screenshot">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20250105151917/https://yann.lecun.com/exdb/mnist/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20250105151917/https://yann.lecun.com/exdb/mnist/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/archiveteam);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/archiveteam" target="_new"><span class="wm-title">Archive Team</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  <img align=right src="http://archiveteam.org/images/e/e6/Archiveteam.jpg" width=200> Formed in 2009, the Archive Team (not to be confused with the archive.org Archive-It Team) is a rogue archivist collective dedicated to saving copies of rapidly dying or deleted websites for the sake of history and digital heritage. The group is 100% composed of volunteers and interested parties, and has expanded into a large amount of related projects for saving online and digital history.
+<p>
+History is littered with hundreds of conflicts over the future of a community, group, location or business that were "resolved" when one of the parties stepped ahead and destroyed what was there. With the original point of contention destroyed, the debates would fall to the wayside. Archive Team believes that by duplicated condemned data, the conversation and debate can continue, as well as the richness and insight gained by keeping the materials. Our projects have ranged in size from a single volunteer downloading the data to a small-but-critical site, to over 100 volunteers stepping forward to acquire terabytes of user-created data to save for future generations.
+<p>
+The main site for Archive Team is at <a href="http://www.archiveteam.org">archiveteam.org</a> and contains up to the date information on various projects, manifestos, plans and walkthroughs.
+<p>
+This collection contains the output of many Archive Team projects, both ongoing and completed. Thanks to the generous providing of disk space by the Internet Archive, multi-terabyte datasets can be made available, as well as in use by the <a href="http://archive.org/web/web.php">Wayback Machine</a>, providing a path back to lost websites and work. 
+<p>
+Our collection has grown to the point of having sub-collections for the type of data we acquire. If you are seeking to browse the contents of these collections, the Wayback Machine is the best first stop. Otherwise, you are free to dig into the stacks to see what you may find.
+<p>
+<b>The Archive Team Panic Downloads</b> are full pulldowns of currently extant websites, meant to serve as emergency backups for needed sites that are in danger of closing, or which will be missed dearly if suddenly lost due to hard drive crashes or server failures. 
+<p>
+	</div>
+	      </div>
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/archivebot)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/archivebot" target="_new"><span class="wm-title">ArchiveBot: The Archive Team Crowdsourced Crawler</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  ArchiveBot is an IRC bot designed to automate the archival of smaller websites (e.g. up to a few hundred thousand URLs). You give it a URL to start at, and it grabs all content under that URL, records it in a WARC, and then uploads that WARC to ArchiveTeam servers for eventual injection into the Internet Archive (or other archive sites).
+<p>
+To use ArchiveBot, drop by #archivebot on EFNet. To interact with ArchiveBot, you issue commands by typing it into the channel. Note you will need channel operator permissions in order to issue archiving jobs. The dashboard shows the sites being downloaded currently.
+<p>
+There is a dashboard running for the archivebot process at <a href="http://www.archivebot.com">http://www.archivebot.com</a>.
+<p>
+ArchiveBot's source code can be found at <a href="https://github.com/ArchiveTeam/ArchiveBot">https://github.com/ArchiveTeam/ArchiveBot</a>.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading" /></div>
+    </div>
+    </div>
+  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20250105151917/https://yann.lecun.com/exdb/mnist/</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(750,27,25,2,"web","https://yann.lecun.com/exdb/mnist/","20250105151917",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=p7PEIJWi","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+
+<center>
+<h1>
+<font color="#FF0000"><font size="+4">THE MNIST DATABASE</font></font></h1></center>
+
+<center><font color="#FF0000"><font size="+4">of handwritten digits</font></font></center>
+
+<center><font color="#FF0000"><font size="+4"></font></font></center>
+
+<center><font color="#3366FF"><font size="+1"><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/">Yann LeCun</a>, Courant Institute, NYU</font></font></center>
+<center><font color="#3366FF"><font size="+1"><a href="https://web.archive.org/web/20250105151917/http://homepage.mac.com/corinnacortes/">Corinna Cortes</a>, Google Labs, New York</font></font></center>
+<center><font color="#3366FF"><font size="+1"><a href="https://web.archive.org/web/20250105151917/http://research.microsoft.com/en-us/people/cburges/">Christopher J.C. Burges</a>, Microsoft Research, Redmond</font></font></center>
+
+<center>&nbsp;</center>
+The MNIST database of handwritten digits, available from this page, has a
+training set of 60,000 examples, and a test set of 10,000 examples. It
+is a subset of a larger set available from NIST. The digits have
+been size-normalized and centered in a fixed-size image.
+<p>
+It is a good database for people who want to try learning techniques
+and pattern recognition methods on real-world data while spending minimal
+efforts on preprocessing and formatting.
+<p>
+Four files are available on this site:
+
+<p><tt><a href="train-images-idx3-ubyte.gz">train-images-idx3-ubyte.gz</a>:&nbsp;
+training set images (9912422 bytes)</tt>
+<br><tt><a href="train-labels-idx1-ubyte.gz">train-labels-idx1-ubyte.gz</a>:&nbsp;
+training set labels (28881 bytes)</tt>
+<br><tt><a href="t10k-images-idx3-ubyte.gz">t10k-images-idx3-ubyte.gz</a>:&nbsp;&nbsp;
+test set images (1648877 bytes)</tt>
+<br><tt><a href="t10k-labels-idx1-ubyte.gz">t10k-labels-idx1-ubyte.gz</a>:&nbsp;&nbsp;
+test set labels (4542 bytes)</tt>
+<p>
+<b>please note that your browser may uncompress these files without telling you</b>.
+If the files you downloaded have a larger size than the above, they have been
+uncompressed by your browser. Simply rename them to remove the .gz extension.
+Some people have asked me "my application can't open your image files".
+These files are not in any standard image format. You have to write
+your own (very simple) program to read them. The file format is described
+at the bottom of this page.
+<p>
+The original black and white (bilevel) images from NIST were size normalized
+to fit in a 20x20 pixel box while preserving their aspect ratio. The resulting
+images contain grey levels as a result of the anti-aliasing technique used
+by the normalization algorithm. the images were centered in a 28x28 image
+by computing the center of mass of the pixels, and translating the image
+so as to position this point at the center of the 28x28 field.
+<p>
+With some classification methods (particuarly template-based methods,
+such as SVM and K-nearest neighbors), the error rate improves when the
+digits are centered by bounding box rather than center of mass. If you
+do this kind of pre-processing, you should report it in your
+publications.
+<p>
+The MNIST database was constructed from NIST's Special Database 3 and
+Special Database 1 which contain binary images of handwritten digits. NIST
+originally designated SD-3 as their training set and SD-1 as their test
+set. However, SD-3 is much cleaner and easier to recognize than SD-1. The
+reason for this can be found on the fact that SD-3 was collected among
+Census Bureau employees, while SD-1 was collected among high-school students.
+Drawing sensible conclusions from learning experiments requires that the
+result be independent of the choice of training set and test among the
+complete set of samples. Therefore it was necessary to build a new database
+by mixing NIST's datasets.
+<p>
+The MNIST training set is composed of 30,000 patterns from SD-3 and
+30,000 patterns from SD-1. Our test set was composed of 5,000 patterns
+from SD-3 and 5,000 patterns from SD-1. The 60,000 pattern training set
+contained examples from approximately 250 writers. We made sure that the
+sets of writers of the training set and test set were disjoint.
+<p>
+SD-1 contains 58,527 digit images written by 500 different writers.
+In contrast to SD-3, where blocks of data from each writer appeared in
+sequence, the data in SD-1 is scrambled. Writer identities for SD-1 is
+available and we used this information to unscramble the writers. We then
+split SD-1 in two: characters written by the first 250 writers went into
+our new training set. The remaining 250 writers were placed in our test
+set. Thus we had two sets with nearly 30,000 examples each. The new training
+set was completed with enough examples from SD-3, starting at pattern #
+0, to make a full set of 60,000 training patterns. Similarly, the new test
+set was completed with SD-3 examples starting at pattern # 35,000 to make
+a full set with 60,000 test patterns. Only a subset of 10,000 test images
+(5,000 from SD-1 and 5,000 from SD-3) is available on this site. The full
+60,000 sample training set is available.
+<p>
+Many methods have been tested with this training set and test set. Here
+are a few examples. Details about the methods are given in an upcoming
+paper. Some of those experiments used a version of the database where the
+input images where deskewed (by computing the principal axis of the shape
+that is closest to the vertical, and shifting the lines so as to make it
+vertical). In some other experiments, the training set was augmented with
+artificially distorted versions of the original training samples. The distortions
+are random combinations of shifts, scaling, skewing, and compression.
+<br>&nbsp;
+
+
+<table border="1" cellpadding="3">
+<tr><td>CLASSIFIER</td>
+ <td>PREPROCESSING</td>
+ <td align="right">TEST ERROR RATE (%)</td>
+ <td>Reference</td></tr>
+
+<tr><td colspan="4" align="center"><b>Linear Classifiers</b></td></tr>
+
+<tr><td>linear classifier (1-layer NN)</td>
+  <td>none</td>
+  <td align="right">12.0</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>linear classifier (1-layer NN)</td>
+  <td>deskewing</td>
+  <td align="right">8.4</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>pairwise linear classifier</td>
+  <td>deskewing</td>
+  <td align="right">7.6</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+
+<tr><td colspan="4" align="center"><b>K-Nearest Neighbors</b></td></tr>
+
+<tr><td>K-nearest-neighbors, Euclidean (L2)</td>
+  <td>none</td>
+  <td align="right">5.0</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>K-nearest-neighbors, Euclidean (L2)</td>
+  <td>none</td>
+  <td align="right">3.09</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://finmath.uchicago.edu/~wilder/Mnist/">Kenneth Wilder, U. Chicago</a></td></tr>
+<tr><td>K-nearest-neighbors, L3</td>
+  <td>none</td>
+  <td align="right">2.83</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://finmath.uchicago.edu/~wilder/Mnist/">Kenneth Wilder, U. Chicago</a></td></tr>
+<tr><td>K-nearest-neighbors, Euclidean (L2)</td>
+  <td>deskewing</td>
+  <td align="right">2.4</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>K-nearest-neighbors, Euclidean (L2)</td>
+  <td>deskewing, noise removal, blurring</td>
+  <td align="right">1.80</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://finmath.uchicago.edu/~wilder/Mnist/">Kenneth Wilder, U. Chicago</a></td></tr>
+<tr><td>K-nearest-neighbors, L3</td>
+  <td>deskewing, noise removal, blurring</td>
+  <td align="right">1.73</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://finmath.uchicago.edu/~wilder/Mnist/">Kenneth Wilder, U. Chicago</a></td></tr>
+<tr><td>K-nearest-neighbors, L3</td>
+  <td>deskewing, noise removal, blurring, 1 pixel shift</td>
+  <td align="right">1.33</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://finmath.uchicago.edu/~wilder/Mnist/">Kenneth Wilder, U. Chicago</a></td></tr>
+<tr><td>K-nearest-neighbors, L3</td>
+  <td>deskewing, noise removal, blurring, 2 pixel shift</td>
+  <td align="right">1.22</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://finmath.uchicago.edu/~wilder/Mnist/">Kenneth  Wilder, U. Chicago</a></td></tr>
+
+<tr><td>K-NN with non-linear deformation (IDM)</td>
+  <td>shiftable edges</td>
+  <td align="right">0.54</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://www.iupr.org/~keysers/files/Keysers--Deformation-Models--TPAMI2007.pdf">Keysers et al. IEEE PAMI 2007</a></td></tr>
+<tr><td>K-NN with non-linear deformation (P2DHMDM)</td>
+  <td>shiftable edges</td>
+  <td align="right">0.52</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://www.iupr.org/~keysers/files/Keysers--Deformation-Models--TPAMI2007.pdf">Keysers et al. IEEE PAMI 2007</a></td></tr>
+<tr><td>K-NN, Tangent Distance</td>
+  <td>subsampling to 16x16 pixels</td>
+  <td align="right">1.1</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>K-NN, shape context matching</td>
+  <td>shape context feature extraction</td>
+  <td align="right">0.63</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://http.cs.berkeley.edu/projects/vision/shape/">Belongie et al. IEEE PAMI 2002</a></td></tr>
+
+<tr><td colspan="4" align="center"><b>Boosted Stumps</b></td></tr>
+
+<tr><td>boosted stumps</td>
+  <td>none</td>
+  <td align="right">7.7</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://users.web.lal.in2p3.fr/kegl/research/PDFs/keglBusafekete09.pdf">Kegl et al., ICML 2009</a></td></tr>
+<tr><td>products of boosted stumps (3 terms)</td>
+  <td>none</td>
+  <td align="right">1.26</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://users.web.lal.in2p3.fr/kegl/research/PDFs/keglBusafekete09.pdf">Kegl et al., ICML 2009</a></td></tr>
+<tr><td>boosted trees (17 leaves)</td>
+  <td>none</td>
+  <td align="right">1.53</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://users.web.lal.in2p3.fr/kegl/research/PDFs/keglBusafekete09.pdf">Kegl et al., ICML 2009</a></td></tr>
+<tr><td>stumps on Haar features</td>
+  <td>Haar features</td>
+  <td align="right">1.02</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://users.web.lal.in2p3.fr/kegl/research/PDFs/keglBusafekete09.pdf">Kegl et al., ICML 2009</a></td></tr>
+<tr><td>product of stumps on Haar f.</td>
+  <td>Haar features</td>
+  <td align="right">0.87</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://users.web.lal.in2p3.fr/kegl/research/PDFs/keglBusafekete09.pdf">Kegl et al., ICML 2009</a></td></tr>
+
+<tr><td colspan="4" align="center"><b>Non-Linear Classifiers</b></td></tr>
+
+<tr><td>40 PCA + quadratic classifier</td>
+  <td>none</td>
+  <td align="right">3.3</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>1000 RBF + linear classifier</td>
+  <td>none</td>
+  <td align="right">3.6</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+
+<tr><td colspan="4" align="center"><b>SVMs</b></td></tr>
+
+<tr><td>SVM, Gaussian Kernel</td>
+  <td>none</td>
+  <td align="right">1.4</td>
+  <td></td></tr>
+<tr><td>SVM deg 4 polynomial</td>
+  <td>deskewing</td>
+  <td align="right">1.1</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Reduced Set SVM deg 5 polynomial</td>
+  <td>deskewing</td>
+  <td align="right">1.0</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Virtual SVM deg-9 poly [distortions]</td>
+  <td>none</td>
+  <td align="right">0.8</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Virtual SVM, deg-9 poly, 1-pixel jittered</td>
+  <td>none</td>
+  <td align="right">0.68</td>
+  <td>DeCoste and Scholkopf, MLJ 2002</td></tr>
+<tr><td>Virtual SVM, deg-9 poly, 1-pixel jittered</td>
+  <td>deskewing</td>
+  <td align="right">0.68</td>
+  <td>DeCoste and Scholkopf, MLJ 2002</td></tr>
+<tr><td>Virtual SVM, deg-9 poly, 2-pixel jittered</td>
+  <td>deskewing</td>
+  <td align="right">0.56</td>
+  <td>DeCoste and Scholkopf, MLJ 2002</td></tr>
+
+
+<tr><td colspan="4" align="center"><b>Neural Nets</b></td></tr>
+
+<tr><td>2-layer NN, 300 hidden units, mean square error</td>
+  <td>none</td>
+  <td align="right">4.7</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>2-layer NN, 300 HU, MSE, [distortions]</td>
+  <td>none</td>
+  <td align="right">3.6</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>2-layer NN, 300 HU</td>
+  <td>deskewing</td>
+  <td align="right">1.6</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>2-layer NN, 1000 hidden units</td>
+  <td>none</td>
+  <td align="right">4.5</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>2-layer NN, 1000 HU, [distortions]</td>
+  <td>none</td>
+  <td align="right">3.8</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>3-layer NN, 300+100 hidden units</td>
+  <td>none</td>
+  <td align="right">3.05</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>3-layer NN, 300+100 HU [distortions]</td>
+  <td>none</td>
+  <td align="right">2.5</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>3-layer NN, 500+150 hidden units</td>
+  <td>none</td>
+  <td align="right">2.95</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>3-layer NN, 500+150 HU [distortions]</td>
+  <td>none</td>
+  <td align="right">2.45</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>3-layer NN, 500+300 HU, softmax, cross entropy, weight decay</td>
+  <td>none</td>
+  <td align="right">1.53</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://www.cs.toronto.edu/~hinton/">Hinton, unpublished, 2005</a></td></tr>
+<tr><td>2-layer NN, 800 HU, Cross-Entropy Loss</td>
+  <td>none</td>
+  <td align="right">1.6</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://research.microsoft.com/~patrice/publi.html">Simard et al., ICDAR 2003</a></td></tr>
+<tr><td>2-layer NN, 800 HU, cross-entropy [affine distortions]</td>
+  <td>none</td>
+  <td align="right">1.1</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://research.microsoft.com/~patrice/publi.html">Simard et al., ICDAR 2003</a></td></tr>
+<tr><td>2-layer NN, 800 HU, MSE [elastic distortions]</td>
+  <td>none</td>
+  <td align="right">0.9</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://research.microsoft.com/~patrice/publi.html">Simard et al., ICDAR 2003</a></td></tr>
+<tr><td>2-layer NN, 800 HU, cross-entropy [elastic distortions]</td>
+  <td>none</td>
+  <td align="right">0.7</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://research.microsoft.com/~patrice/publi.html">Simard et al., ICDAR 2003</a></td></tr>
+<tr><td>NN, 784-500-500-2000-30 + nearest neighbor, RBM + NCA training [no distortions]</td>
+  <td>none</td>
+  <td align="right">1.0</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://www.cs.utoronto.ca/~hinton/absps/nonlinnca.pdf">Salakhutdinov and Hinton, AI-Stats 2007</a></td></tr>
+<tr><td>6-layer NN 784-2500-2000-1500-1000-500-10 (on GPU) [elastic distortions]</td>
+  <td>none</td>
+  <td align="right">0.35</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://arxiv.org/abs/1003.0358">Ciresan et al. Neural Computation 10, 2010 and arXiv 1003.0358, 2010</a></td></tr>
+<tr><td>committee of 25 NN 784-800-10 [elastic distortions]</td>
+  <td>width normalization, deslanting</td>
+  <td align="right">0.39</td>
+  <td><a href="">Meier et al. ICDAR 2011</a></td></tr>
+<tr><td>deep convex net, unsup pre-training [no distortions]</td>
+  <td>none</td>
+  <td align="right">0.83</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://research.microsoft.com/pubs/152133/DeepConvexNetwork-Interspeech2011-pub.pdf">Deng et al. Interspeech 2010</a></td></tr>
+
+<tr><td colspan="4" align="center"><b>Convolutional nets</b></td></tr>
+
+<tr><td>Convolutional net LeNet-1</td>
+  <td>subsampling to 16x16 pixels</td>
+  <td align="right">1.7</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Convolutional net LeNet-4</td>
+  <td>none</td>
+  <td align="right">1.1</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Convolutional net LeNet-4 with K-NN instead of last layer</td>
+  <td>none</td>
+  <td align="right">1.1</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Convolutional net LeNet-4 with local learning instead of last layer</td>
+  <td>none</td>
+  <td align="right">1.1</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Convolutional net LeNet-5, [no distortions]</td>
+  <td>none</td>
+  <td align="right">0.95</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Convolutional net LeNet-5, [huge distortions]</td>
+  <td>none</td>
+  <td align="right">0.85</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Convolutional net LeNet-5, [distortions]</td>
+  <td>none</td>
+  <td align="right">0.8</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+<tr><td>Convolutional net Boosted LeNet-4, [distortions]</td>
+  <td>none</td>
+  <td align="right">0.7</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#lecun-98">LeCun et al. 1998</a></td></tr>
+
+<tr><td>Trainable feature extractor + SVMs [no distortions]</td>
+  <td>none</td>
+  <td align="right"> 0.83</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://hal.archives-ouvertes.fr/hal-00018426/en">Lauer et al., Pattern Recognition 40-6, 2007</a></td></tr>
+<tr><td>Trainable feature extractor + SVMs [elastic distortions]</td>
+  <td>none</td>
+  <td align="right"> 0.56</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://hal.archives-ouvertes.fr/hal-00018426/en">Lauer et al., Pattern Recognition 40-6, 2007</a></td></tr>
+<tr><td>Trainable feature extractor + SVMs [affine distortions]</td>
+  <td>none</td>
+  <td align="right"> 0.54</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://hal.archives-ouvertes.fr/hal-00018426/en">Lauer et al., Pattern Recognition 40-6, 2007</a></td></tr>
+
+<tr><td>unsupervised sparse features + SVM, [no distortions]</td>
+  <td>none</td>
+  <td align="right">0.59</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://www.inb.uni-luebeck.de/publications/pdfs/LaBaMa08c.pdf">Labusch et al., IEEE TNN 2008</a></td></tr>
+<tr><td>Convolutional net, cross-entropy [affine distortions]</td>
+  <td>none</td>
+  <td align="right">0.6</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://research.microsoft.com/~patrice/publi.html">Simard et al., ICDAR 2003</a></td></tr>
+<tr><td>Convolutional net, cross-entropy [elastic distortions]</td>
+  <td>none</td>
+  <td align="right">0.4</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://research.microsoft.com/~patrice/publi.html">Simard et al., ICDAR 2003</a></td></tr>
+<tr><td>large conv. net, random features [no distortions]</td>
+  <td>none</td>
+  <td align="right">0.89</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#ranzato-cvpr-07">Ranzato et al., CVPR 2007</a></td></tr>
+<tr><td>large conv. net, unsup features [no distortions]</td>
+  <td>none</td>
+  <td align="right">0.62</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#ranzato-cvpr-07">Ranzato et al., CVPR 2007</a></td></tr>
+<tr><td>large conv. net, unsup pretraining [no distortions]</td>
+  <td>none</td>
+  <td align="right">0.60</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#ranzato-06">Ranzato et al., NIPS 2006</a></td></tr>
+<tr><td>large conv. net, unsup pretraining [elastic distortions]</td>
+  <td>none</td>
+  <td align="right">0.39</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#ranzato-06">Ranzato et al., NIPS 2006</a></td></tr>
+<tr><td>large conv. net, unsup pretraining [no distortions]</td>
+  <td>none</td>
+  <td align="right">0.53</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/exdb/publis/index.html#jarrett-iccv-09">Jarrett et al., ICCV 2009</a></td></tr>
+<tr><td>large/deep conv. net, 1-20-40-60-80-100-120-120-10 [elastic distortions]</td>
+  <td>none</td>
+  <td align="right">0.35</td>
+  <td><a href="">Ciresan et al. IJCAI 2011</a></td></tr>
+<tr><td>committee of 7 conv. net, 1-20-P-40-P-150-10 [elastic distortions]</td>
+  <td>width normalization</td>
+  <td align="right">0.27 +-0.02</td>
+  <td><a href="">Ciresan et al. ICDAR 2011</a></td></tr>
+<tr><td>committee of 35 conv. net, 1-20-P-40-P-150-10 [elastic distortions]</td>
+  <td>width normalization</td>
+   <td align="right">0.23</td>
+  <td><a href="https://web.archive.org/web/20250105151917/http://arxiv.org/abs/1202.2745">Ciresan et al. CVPR 2012</a></td></tr>
+</table>
+
+<h3><font color="#3333FF">References</font></h3>
+
+<dl>
+
+<dt><a name="lecun-98">[LeCun et al., 1998a]</a><dd>Y. LeCun, L. Bottou,
+  Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition."
+<cite>Proceedings of the IEEE</cite>, 86(11):2278-2324, November 1998.
+<a href="/web/20250105151917/https://yann.lecun.com/exdb/publis/index.html#lecun-98">[on-line version]</a>
+
+<dt>
+
+</dl>
+
+<h2><hr width="100%"></h2>
+
+<h2>
+<font color="#3333FF">FILE FORMATS FOR THE MNIST DATABASE</font></h2>
+The data is stored in a very simple file format designed for storing vectors
+and multidimensional matrices. General info on this format is given at
+the end of this page, but you don't need to read that to use the data files.
+
+<p>All the integers in the files are stored in the MSB first (high endian)
+format used by most non-Intel processors. Users of Intel processors and
+other low-endian machines must flip the bytes of the header.
+
+<p>There are 4 files:<tt></tt>
+
+<p><tt>train-images-idx3-ubyte: training set images</tt>
+<br><tt>train-labels-idx1-ubyte: training set labels</tt>
+<br><tt>t10k-images-idx3-ubyte:&nbsp; test set images</tt>
+<br><tt>t10k-labels-idx1-ubyte:&nbsp; test set labels</tt>
+
+<p>The training set contains 60000 examples, and the test set 10000 examples.
+
+<p>The first 5000 examples of the test set are taken from the original
+NIST training set. The last 5000 are taken from the original NIST test
+set. The first 5000 are cleaner and easier than the last 5000.
+<h3>
+TRAINING SET LABEL FILE (train-labels-idx1-ubyte):</h3>
+<tt>[offset] [type]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[value]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [description]</tt>
+<br><tt>0000&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 0x00000801(2049)
+magic number (MSB first)</tt>
+<br><tt>0004&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 60000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+number of items</tt>
+<br><tt>0008&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+label</tt>
+<br><tt>0009&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+label</tt>
+<br><tt>........</tt>
+<br><tt>xxxx&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+label</tt>
+
+<p><tt>The labels values are 0 to 9.</tt>
+<h3>
+TRAINING SET IMAGE FILE (train-images-idx3-ubyte):</h3>
+<tt>[offset] [type]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[value]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [description]</tt>
+<br><tt>0000&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 0x00000803(2051)
+magic number</tt>
+<br><tt>0004&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 60000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+number of images</tt>
+<br><tt>0008&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+number of rows</tt>
+<br><tt>0012&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+number of columns</tt>
+<br><tt>0016&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pixel</tt>
+<br><tt>0017&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pixel</tt>
+<br><tt>........</tt>
+<br><tt>xxxx&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pixel</tt>
+
+<p>Pixels are organized row-wise. Pixel values are 0 to 255. 0 means background
+(white), 255 means foreground (black).
+<h3>
+TEST SET LABEL FILE (t10k-labels-idx1-ubyte):</h3>
+<tt>[offset] [type]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[value]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [description]</tt>
+<br><tt>0000&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 0x00000801(2049)
+magic number (MSB first)</tt>
+<br><tt>0004&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 10000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+number of items</tt>
+<br><tt>0008&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+label</tt>
+<br><tt>0009&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+label</tt>
+<br><tt>........</tt>
+<br><tt>xxxx&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+label</tt>
+
+<p>The labels values are 0 to 9.
+<h3>
+TEST SET IMAGE FILE (t10k-images-idx3-ubyte):</h3>
+<tt>[offset] [type]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[value]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [description]</tt>
+<br><tt>0000&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 0x00000803(2051)
+magic number</tt>
+<br><tt>0004&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 10000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+number of images</tt>
+<br><tt>0008&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+number of rows</tt>
+<br><tt>0012&nbsp;&nbsp;&nbsp;&nbsp; 32 bit integer&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+number of columns</tt>
+<br><tt>0016&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pixel</tt>
+<br><tt>0017&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pixel</tt>
+<br><tt>........</tt>
+<br><tt>xxxx&nbsp;&nbsp;&nbsp;&nbsp; unsigned byte&nbsp;&nbsp; ??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pixel</tt>
+
+<p>Pixels are organized row-wise. Pixel values are 0 to 255. 0 means background
+(white), 255 means foreground (black).
+<br>&nbsp;
+<br>
+<hr width="100%">
+<h2>
+<font color="#3333FF">THE IDX FILE FORMAT</font></h2>
+the IDX file format is a simple format for vectors and multidimensional
+matrices of various numerical types.
+
+<p>The basic format is
+
+<p><tt>magic number</tt>
+<br><tt>size in dimension 0</tt>
+<br><tt>size in dimension 1</tt>
+<br><tt>size in dimension 2</tt>
+<br><tt>.....</tt>
+<br><tt>size in dimension N</tt>
+<br><tt>data</tt>
+
+<p>The magic number is an integer (MSB first). The first 2 bytes are always
+0.
+
+<p>The third byte codes the type of the data:
+<br>0x08: unsigned byte
+<br>0x09: signed byte
+<br>0x0B: short (2 bytes)
+<br>0x0C: int (4 bytes)
+<br>0x0D: float (4 bytes)
+<br>0x0E: double (8 bytes)
+
+<p>The 4-th byte codes the number of dimensions of the vector/matrix: 1
+for vectors, 2 for matrices....
+
+<p>The sizes in each dimension are 4-byte integers (MSB first, high endian,
+like in most non-Intel processors).
+
+<p>The data is stored like in a C array, i.e. the index in the last dimension
+changes the fastest.
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<p>
+Happy hacking.
+<p>
+<hr width="100%">
+<p>
+The digit images in the MNIST set were originally selected and
+experimented with by Chris Burges and Corinna Cortes using
+bounding-box normalization and centering. Yann LeCun's version which
+is provided on this page uses centering by center of mass within in a
+larger window.
+<p>
+<font color="#3333FF"><a href="https://web.archive.org/web/20250105151917/http://yann.lecun.com/">Yann LeCun</a>, Professor<br>
+The Courant Institute of Mathematical Sciences<br>
+New York University<br>
+<img src="/web/20250105151917im_/https://yann.lecun.com/ex/images/email.gif">
+</font>
+<p>
+<font color="#3333FF"><a href="https://web.archive.org/web/20250105151917/http://homepage.mac.com/corinnacortes/">Corinna Cortes</a>, Research Scientist<br>
+Google Labs, New York<br>
+<i>corinna at google dot com</i>
+</font>
+
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 15:19:17 Jan 05, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:57:33 May 12, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 4.978 (7)
+  exclusion.robots: 0.247 (7)
+  exclusion.robots.policy: 0.151 (7)
+  esindex: 0.087 (7)
+  cdx.remote: 1712.003 (7)
+  LoadShardBlock: 1078.181 (24)
+  PetaboxLoader3.datanode: 797.86 (25)
+  PetaboxLoader3.resolve: 356.339 (3)
+  load_resource: 200.782
+-->
